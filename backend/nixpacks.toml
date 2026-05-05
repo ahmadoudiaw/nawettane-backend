@@ -1,15 +1,15 @@
 [phases.setup]
-nixPkgs = ["nodejs_18", "npm-9_x", "openssl"]
+nixPkgs = ["nodejs_18", "openssl"]
 
 [phases.install]
-cmds = ["npm install"]
+cmds = ["cd backend && npm install"]
 
 [phases.build]
 cmds = [
-  "npm run prisma:generate",
-  "npm run prisma:migrate:deploy",
-  "npm run build"
+  "cd backend && npm run prisma:generate",
+  "cd backend && npm run prisma:migrate:deploy",
+  "cd backend && npm run build"
 ]
 
 [start]
-cmd = "npm run start:prod"
+cmd = "cd backend && npm run start:prod"
