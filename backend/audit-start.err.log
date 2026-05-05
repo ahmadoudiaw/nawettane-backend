@@ -1,0 +1,30 @@
+node:child_process:990
+    throw err;
+    ^
+
+<ref *1> Error: spawnSync C:\WINDOWS\system32\cmd.exe EPERM
+    at Object.spawnSync (node:internal/child_process:1120:20)
+    at spawnSync (node:child_process:901:24)
+    at execSync (node:child_process:982:15)
+    at treeKillSync (C:\Projects\NAWETANE\backend\node_modules\@nestjs\cli\lib\utils\tree-kill.js:7:38)
+    at C:\Projects\NAWETANE\backend\node_modules\@nestjs\cli\actions\start.action.js:69:46
+    at Object.onWatchStatusChange (C:\Projects\NAWETANE\backend\node_modules\@nestjs\cli\lib\compiler\watch-compiler.js:82:17)
+    at C:\Projects\NAWETANE\backend\node_modules\typescript\lib\typescript.js:133916:30
+    at emitFilesAndReportErrors (C:\Projects\NAWETANE\backend\node_modules\typescript\lib\typescript.js:133737:5)
+    at result.afterProgramCreate (C:\Projects\NAWETANE\backend\node_modules\typescript\lib\typescript.js:133912:5)
+    at synchronizeProgram (C:\Projects\NAWETANE\backend\node_modules\typescript\lib\typescript.js:134235:12) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'spawnSync C:\\WINDOWS\\system32\\cmd.exe',
+  path: 'C:\\WINDOWS\\system32\\cmd.exe',
+  spawnargs: [ '/d', '/s', '/c', '"taskkill /pid 1392 /T /F"' ],
+  error: [Circular *1],
+  status: null,
+  signal: null,
+  output: null,
+  pid: 0,
+  stdout: undefined,
+  stderr: undefined
+}
+
+Node.js v22.18.0

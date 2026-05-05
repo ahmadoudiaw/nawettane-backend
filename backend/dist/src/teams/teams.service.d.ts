@@ -1,0 +1,340 @@
+import { Prisma } from '@prisma/client';
+import { AuditLogsService } from '../audit-logs/audit-logs.service';
+import { AuthenticatedUser } from '../common/interfaces/authenticated-user.interface';
+import { PrismaService } from '../prisma/prisma.service';
+import { CreateTeamDto } from './dto/create-team.dto';
+import { UpdateTeamDto } from './dto/update-team.dto';
+export declare class TeamsService {
+    private readonly prisma;
+    private readonly auditLogs;
+    constructor(prisma: PrismaService, auditLogs: AuditLogsService);
+    list(user: AuthenticatedUser): Promise<({
+        _count: {
+            organization: number;
+            homeMatches: number;
+            awayMatches: number;
+        };
+        organization: {
+            name: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.OrganizationStatus;
+            type: import(".prisma/client").$Enums.OrganizationType;
+            parentId: string | null;
+            regionId: string | null;
+            departmentId: string | null;
+            communeId: string | null;
+        };
+        homeMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+        awayMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+    } & {
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: import(".prisma/client").$Enums.OrganizationStatus;
+        organizationId: string;
+        category: import(".prisma/client").$Enums.AgeCategory;
+    })[]>;
+    create(dto: CreateTeamDto, user: AuthenticatedUser): Promise<{
+        _count: {
+            organization: number;
+            homeMatches: number;
+            awayMatches: number;
+        };
+        organization: {
+            name: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.OrganizationStatus;
+            type: import(".prisma/client").$Enums.OrganizationType;
+            parentId: string | null;
+            regionId: string | null;
+            departmentId: string | null;
+            communeId: string | null;
+        };
+        homeMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+        awayMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+    } & {
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: import(".prisma/client").$Enums.OrganizationStatus;
+        organizationId: string;
+        category: import(".prisma/client").$Enums.AgeCategory;
+    }>;
+    getById(id: string, user: AuthenticatedUser): Promise<{
+        _count: {
+            organization: number;
+            homeMatches: number;
+            awayMatches: number;
+        };
+        organization: {
+            name: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.OrganizationStatus;
+            type: import(".prisma/client").$Enums.OrganizationType;
+            parentId: string | null;
+            regionId: string | null;
+            departmentId: string | null;
+            communeId: string | null;
+        };
+        homeMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+        awayMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+    } & {
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: import(".prisma/client").$Enums.OrganizationStatus;
+        organizationId: string;
+        category: import(".prisma/client").$Enums.AgeCategory;
+    }>;
+    update(id: string, dto: UpdateTeamDto, user: AuthenticatedUser): Promise<{
+        _count: {
+            organization: number;
+            homeMatches: number;
+            awayMatches: number;
+        };
+        organization: {
+            name: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.OrganizationStatus;
+            type: import(".prisma/client").$Enums.OrganizationType;
+            parentId: string | null;
+            regionId: string | null;
+            departmentId: string | null;
+            communeId: string | null;
+        };
+        homeMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+        awayMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+    } & {
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: import(".prisma/client").$Enums.OrganizationStatus;
+        organizationId: string;
+        category: import(".prisma/client").$Enums.AgeCategory;
+    }>;
+    softDelete(id: string, user: AuthenticatedUser): Promise<{
+        _count: {
+            organization: number;
+            homeMatches: number;
+            awayMatches: number;
+        };
+        organization: {
+            name: string;
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.OrganizationStatus;
+            type: import(".prisma/client").$Enums.OrganizationType;
+            parentId: string | null;
+            regionId: string | null;
+            departmentId: string | null;
+            communeId: string | null;
+        };
+        homeMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+        awayMatches: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: import(".prisma/client").$Enums.MatchStatus;
+            organizationId: string;
+            seasonId: string;
+            venueId: string;
+            homeTeamId: string;
+            awayTeamId: string;
+            competitionName: string;
+            category: import(".prisma/client").$Enums.AgeCategory;
+            stage: string | null;
+            matchDate: Date;
+            ticketPrice: Prisma.Decimal;
+            ticketQuota: number | null;
+            createdById: string;
+        }[];
+    } & {
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: import(".prisma/client").$Enums.OrganizationStatus;
+        organizationId: string;
+        category: import(".prisma/client").$Enums.AgeCategory;
+    }>;
+    delete(id: string, user: AuthenticatedUser): Promise<{
+        name: string;
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: import(".prisma/client").$Enums.OrganizationStatus;
+        organizationId: string;
+        category: import(".prisma/client").$Enums.AgeCategory;
+    }>;
+    private checkDuplicateTeamName;
+    private ensureZoneOrganization;
+    private assertCanManage;
+    private assertCanRead;
+    private defaultInclude;
+}

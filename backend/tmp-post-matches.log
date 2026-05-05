@@ -1,0 +1,67 @@
+
+> nawettane-backend@0.1.0 start:prod
+> node dist/src/main.js
+
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +28ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSeasonsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +5ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPaymentsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTicketsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrganizationsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMatchesModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScansModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mReportingModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api}:[39m[38;5;3m +29ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrganizationsController {/api/organizations}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/organizations/tree, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/organizations/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mMatchesController {/api/matches}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/matches, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/matches, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/matches/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/matches/:id, PATCH} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/matches/:id/publish, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/api/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/orders, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPaymentsController {/api/payments}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/payments/:orderId/mock-confirm, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mTicketsController {/api/tickets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/tickets/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mScansController {/api/scan}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/scan/validate, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mReportingController {/api/reports}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/reports/dashboard, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 19364  - [39m22/04/2026 18:11:11 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +63ms[39m
+[Nest] 19364  - 22/04/2026 18:11:17   ERROR [ExceptionsHandler] PrismaClientKnownRequestError: 
+Invalid `this.prisma.match.create()` invocation in
+C:\Projects\NAWETANE\backend\dist\src\matches\matches.service.js:65:34
+
+  62     throw new common_1.ForbiddenException('You cannot create a match outside your zone scope.');
+  63 }
+  64 const normalizedCategories = this.normalizeTicketCategories(dto.ticketCategories);
+ÔåÆ 65 return this.prisma.match.create(
+The table `(not available)` does not exist in the current database.
+    at ei.handleRequestError (C:\Projects\NAWETANE\backend\node_modules\@prisma\client\runtime\library.js:121:7268)
+    at ei.handleAndLogRequestError (C:\Projects\NAWETANE\backend\node_modules\@prisma\client\runtime\library.js:121:6593)
+    at ei.request (C:\Projects\NAWETANE\backend\node_modules\@prisma\client\runtime\library.js:121:6300)
+    at async a (C:\Projects\NAWETANE\backend\node_modules\@prisma\client\runtime\library.js:130:9551)
+    at async C:\Projects\NAWETANE\backend\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at async C:\Projects\NAWETANE\backend\node_modules\@nestjs\core\router\router-proxy.js:9:17 {
+  code: 'P2021',
+  meta: {
+    modelName: 'Match',
+    table: '(not available)'
+  },
+  clientVersion: '6.19.3'
+}
